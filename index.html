@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -23,33 +24,34 @@
         <form action="">
 
           <div class="input-group mb-3">
-            <input type="text" name="inname" style="background-color:transparent; color:black;" class="border border-primary border-2  border-top-0 border-start-0 border-end-0 form-control " placeholder="Interviewer Name*" />
+            <input type="text" name="inname" id="interviewName" style="background-color:transparent; color:black;" class="border border-primary border-2  border-top-0 border-start-0 border-end-0 form-control " placeholder="Interviewer Name*" />
           </div>
 
           <div class="input-group   mb-3">
-            <input type="text" style="background-color:transparent; color:black;" class="form-control border border-primary border-2 border-top-0 border-start-0 border-end-0" placeholder="Candidate Name*" />
+            <input type="text" id="condidateName" style="background-color:transparent; color:black;" class="form-control border border-primary border-2 border-top-0 border-start-0 border-end-0" placeholder="Candidate Name*" />
           </div>
 
           <div>
-            <select class="list-color form-select form-select-lg mb-3 " >
-              <option selected>--Status--</option>
+            <select class="list-color form-select form-select-lg mb-3" id="results" >
+              <option  selected="selected" >--Status--</option>
               <option value="Selected">Selected</option>
               <option value="Rejected">Rejected</option>
             </select>
           </div>
 
           <div class="mb-3"> 
-            <input type="date" class="form-control" >
+            <input type="date" id="interviewDate" class="form-control" >
           </div>
           <div class=" mb-3">
-            <textarea style="background-color:transparent; color:black;" class=" input-bott form-control border border-2 border-primary border-top-0 border-start-0 border-end-0" placeholder="Enter Your Feedback" rows="2"></textarea>
+            <textarea id="feedback" style="background-color:transparent; color:black;" class=" input-bott form-control border border-2 border-primary border-top-0 border-start-0 border-end-0" placeholder="Enter Your Feedback" rows="2"></textarea>
           </div>
           <div>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button id="btn" type="button" class="btn btn-primary">Submit</button>
           </div>
 
         </form>
       </div> 
+      <script src="./index.js"></script>
 
       <!-- contect Part  -->
 
@@ -71,13 +73,14 @@
             <p>Sector 4, <br> ABL Workspace Noida</p>
           </div>
           <div>
-            <button type="button" class="btn btn-primary w-100"><img src="./image/location.svg" width="40px"  height="30px"  > Google Map</button>
+            <button type="button"  class="btn btn-primary w-100"><img src="./image/location.svg" width="40px"  height="30px"  > Google Map</button>
           </div>
         </div>
       </div>
     </div>
   </div>
  </section>
+ <p id="p"></p>
 </body>
 </html>
 
